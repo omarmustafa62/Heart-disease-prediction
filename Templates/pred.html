@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" href="static/pred.css" />
+    <link rel="Website Icon" href="https://th.bing.com/th/id/OIG4.Vz2dCWaL8PlfhlzjCS0k?pid=ImgGn" />
+</head>
+
+<body>
+    <div class="login">
+        <h1>Heart Disease Prediction</h1>
+        <form action="{{url_for('predict')}}" method="post">
+            <input type="number" name="age" id="age" placeholder="Enter your age" class="form-control" required min="25"
+                max="80" step="1" />
+
+            <select name="sex" id="sex" class="form-control" required>
+                <option value="" disabled selected>Select Your Gender</option>
+                <option value="0">0 - Female</option>
+                <option value="1">1 - Male</option>
+            </select>
+            <select name="cp" id="cp" class="form-control" required>
+                <option value="" disabled selected>Select Chest Pain Type</option>
+                <option value="0">0 - Typical angina</option>
+                <option value="1">1 - Atypical angina</option>
+                <option value="2">2 - Non-anginal pain</option>
+                <option value="3">3 - Asymptomatic</option>
+            </select>
+            <!-- Resting Blood Pressure -->
+            <input type="number" name="trestbps" placeholder="Resting Blood Pressure (mm Hg)" class="form-control"
+                required min="90" max="200" step="1" />
+            <!-- Serum Cholestoral -->
+            <input type="number" name="chol" placeholder="Serum Cholestoral (mg/dl)" class="form-control"
+                required="required" min="125" max="570" step="5" />
+            <!-- Fasting Blood Sugar -->
+            <select name="fbs" id="fbs" class="form-control" required>
+                <option value="" disabled selected>
+                    Fasting Blood Sugar (> 120 mg/dl)
+                </option>
+                <option value="0">0 - (Less than or equal to 120 mg/dl)</option>
+                <option value="1">1 - (Greater than 120 mg/dl)</option>
+            </select>
+            <!-- Resting Electrocardiographic Results -->
+            <select name="restecg" id="restecg" class="form-control" required>
+                <option value="" disabled selected>
+                    Resting Electrocardiographic Results
+                </option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+            <!-- Maximum Heart Rate Achieved -->
+            <input type="number" name="thalach" placeholder="Maximum Heart Rate Achieved (70-210)" class="form-control"
+                required="required" min="70" max="205" step="1" />
+            <!-- Exercise Induced Angina -->
+            <select name="exang" id="exang" class="form-control" required>
+                <option value="" disabled selected>Exercise Induced Angina</option>
+                <option value="0">0 - No</option>
+                <option value="1">1 - Yes</option>
+            </select>
+            <!-- ST Depression Induced by Exercise Relative to Rest -->
+            <input type="number" name="oldpeak" placeholder="ST Depression Induced by Exercise Relative to Rest"
+                class="form-control" required="required" min="0" max="6.2" step="0.1" />
+            <!-- Slope of the Peak Exercise ST Segment -->
+            <select name="slope" id="slope" class="form-control" required>
+                <option value="" disabled selected>
+                    Slope of the Peak Exercise ST Segment
+                </option>
+                <option value="0">0 - No slope</option>
+                <option value="1">1 - Upsloping</option>
+                <option value="2">2 - Downsloping</option>
+            </select>
+            <!-- Number of Major Vessels Colored by Flourosopy -->
+            <select name="ca" id="ca" class="form-control" required>
+                <option value="" disabled selected>
+                    Number of Major Vessels Colored by Flourosopy (0-4)
+                </option>
+                <option value="0">0 - No major vessels colored</option>
+                <option value="1">1 - One major vessel colored</option>
+                <option value="2">2 - Two major vessels colored</option>
+                <option value="3">3 - Three major vessels colored</option>
+                <option value="4">4 - Four major vessels colored</option>
+            </select>
+            <!-- Thalassemia -->
+            <select name="thal" class="form-control">
+                <option value="" disabled selected>Thalassemia</option>
+                <option value="1">0</option>
+                <option value="0">1</option>
+                <option value="6">2</option>
+                <option value="7">3</option>
+            </select>
+            <button type="submit" class="btn btn-primary btn-block btn-large">
+                Predict
+            </button>
+        </form>
+        <br />
+    </div>
+</body>
+
+</html>

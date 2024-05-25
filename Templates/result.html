@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" href="static/result.css" />
+    <link rel="Website Icon" href="https://th.bing.com/th/id/OIG4.Vz2dCWaL8PlfhlzjCS0k?pid=ImgGn" />
+</head>
+
+<body>
+    <div class="login">
+        <h1>Heart Disease Prediction Result:</h1>
+        <!-- Display Prediction Result -->
+        {% if prediction_text %}
+        <p style="color: red; font-size: 22px">{{ prediction_text }}</p>
+        {% endif %}
+        <br />
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,236 @@
+* {
+  scroll-behavior: smooth;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+/* تعريف نوع الخط */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4kaVIGxA.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* تطبيق النوع على العنصر .para */
+.para {
+  font-family: 'Open Sans', sans-serif; /* استخدام الخط Open Sans */
+  /* أي خصائص أخرى للنص تضاف هنا */
+}
+
+
+
+.btn {
+  display: inline-block;
+  display: inline;
+  zoom: 1;
+  padding: 4px 10px 4px;
+  margin-bottom: 0;
+  font-size: 13px;
+  line-height: 18px;
+  color: #333333;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  background-color: #f5f5f5;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(top, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr=#ffffff, endColorstr=#e6e6e6, GradientType=0);
+  border-color: #e6e6e6 #e6e6e6 #e6e6e6;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border: 1px solid #e6e6e6;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  margin-left: .3em;
+}
+
+.btn:hover,
+.btn:active,
+.btn.active,
+.btn.disabled,
+.btn[disabled] {
+  background-color: #e6e6e6;
+}
+
+.btn-large {
+  padding: 9px 14px;
+  font-size: 15px;
+  line-height: normal;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  color: #333333;
+  text-decoration: none;
+  background-color: #e6e6e6;
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -ms-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
+}
+
+.btn-primary,
+.btn-primary:hover {
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+}
+
+.btn-primary.active {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+
+
+.btn-primary {
+  background-color: rgb(117, 117, 235);
+  background-image: linear-gradient(to top, rgba(117, 117, 235, 0.8), rgba(117, 117, 235, 1));
+  background-image: -ms-linear-gradient(top, #7f6ede, #634ad4);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#8e6ede), to(#6c4ad4));
+  background-image: -webkit-linear-gradient(top, #976ede, #5c4ad4);
+  background-image: -o-linear-gradient(top, #886ede, #4a4cd4);
+  background-image: linear-gradient(top, #916ede, #634ad4);
+  background-repeat: repeat-x;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr=#dc6ede, endColorstr=#8d4ad4, GradientType=0);
+  border: 1px solid #000000;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+  filter: none;
+  background-color: #554ad4;
+}
+
+.btn-block {
+  margin-left: auto; 
+  margin-right: auto;
+  width: 65%;
+  display: block;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+    padding: 0;
+    background-image: url('https://www.tenayatherapeutics.com/wp-content/uploads/2019/01/banner-home.jpg');
+    background-size: cover;
+    background-repeat: no-repeat; 
+    color: #ffffff; /* لون النص */
+    text-align: center;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3E1D6D', endColorstr='#092756', GradientType=1);
+    letter-spacing: 1.2px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+  
+  .services-content {
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .box {
+    margin: 0 auto;
+    width: 95%;
+    padding: 45px;
+    background: #12141c72;
+    border-top: 5px solid transparent;
+    transition: all .40s ease;
+    cursor: pointer;
+    border-radius: 2px;
+    border-color: rgb(117, 117, 235);
+  }
+  
+  .box h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 15px 0;
+    transition: all .40s ease;
+  }
+  
+  .box p {
+    color: var(--second-color);
+    font-size: var(--p-font);
+    line-height: 30px;
+  }
+  
+  .box:hover {
+    transform: scale(1.01) translateY(-10px);
+    border-top: 5px solid var(--main-color);
+  }
+  
+  .box:hover h3 {
+    color: var(--main-color);
+  }
+
+  
+  .navbar {
+    background-color: rgba(53, 52, 58, 0.337);
+    padding: 35px 0;
+
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 60px;
+  margin-top: 15px;
+  margin-bottom: -10px;
+}
+
+.logo-image {
+  width: 40px; 
+  height: auto;
+  margin-right: 10px; 
+}
+
+.site-name {
+  margin: 0;
+  font-size: 25px;
+  text-shadow: 0 0 10px rgb(0, 0, 0);
+  letter-spacing: 1px;
+}
+
+
+.description {
+  font-size: 20px; /* حجم النص */
+  line-height: 1.6; /* المسافة بين الأسطر */
+  font-family: 'Roboto', sans-serif; /* نوع الخط */ 
+  width: fit-content; 
+    background-color: rgba(0, 0, 0, 0.327); /* لون خلفية سوداء شفافة */
+    padding: 80px; /* إضافة تباعد داخلي للعنصر */
+}
+
